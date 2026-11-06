@@ -1,0 +1,22 @@
+/* SOLVIX · Etapa 10. Mejoras puntuales de interacción y lectura.
+   No redefine los colores de marca ni altera el logo. */
+html { scroll-padding-top: 20px; }
+[id] { scroll-margin-top: 22px; }
+a, button, select, input { touch-action: manipulation; }
+button, select, input { font-family: inherit; }
+:where(a, button, select, input, [role="button"]):focus-visible {
+  outline: 3px solid #ffc107;
+  outline-offset: 3px;
+}
+:where(button, select, a) { -webkit-tap-highlight-color: transparent; }
+.atlas-crossbar a, .atlas-crossbar select { min-height: 44px; display:inline-flex; align-items:center; }
+.atlas-crossbar select { cursor:pointer; }
+@media (max-width: 680px) {
+ .atlas-crossbar { gap: 10px; }
+ .atlas-crossbar .atlas-cross-right { min-width:0; flex: 1; justify-content:flex-end; }
+ .atlas-crossbar select { width:100%; max-width:180px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior:auto; }
+ *, *::before, *::after { animation:none!important; transition:none!important; }
+}
