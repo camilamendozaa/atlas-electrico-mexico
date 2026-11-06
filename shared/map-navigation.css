@@ -1,0 +1,7 @@
+
+/* SOLVIX · navegacion ligera de mapas; mantiene la paleta de marca original. */
+.map-card,.map-main {position:relative;}
+.solvix-map-controls{position:absolute;left:19px;top:85px;z-index:6;display:flex;flex-direction:column;gap:4px;padding:5px;background:#ffffffed;border:1px solid #dce7f1;border-radius:11px;box-shadow:0 7px 22px #071c3d19;}
+.solvix-map-controls button{border:0;background:transparent;color:#082d65;font-weight:800;font-size:19px;border-radius:7px;width:35px;height:35px;cursor:pointer;}
+.solvix-map-controls button:hover,.solvix-map-controls button:focus-visible{background:#e6f2fc;outline:2px solid #ffc107;outline-offset:1px;}
+@media(max-width:640px){.solvix-map-controls{left:10px;top:72px;gap:2px;padding:3px}.solvix-map-controls button{width:31px;height:31px;font-size:16px}}
